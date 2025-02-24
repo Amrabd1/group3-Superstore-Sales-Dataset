@@ -15,7 +15,7 @@ df["Month"] = df["Order Date"].dt.month
 # Extract order fulfillment time
 df["Delivery Time (Days)"] = (df["Ship Date"] - df["Order Date"]).dt.days
 
-# Now, I'll perform various analyses based on the given objectives. Let's start with sales performance analysis.
+
 sales_performance = df.groupby(["Year", "Month"])["Sales"].sum().reset_index()
 sales_performance
 # Extract Year and Month from Order Date
